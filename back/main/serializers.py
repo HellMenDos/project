@@ -1,10 +1,17 @@
 from rest_framework import serializers
-from .models import Products,Files,MainCarousel,OurWork,OurService,Support
+from .models import Products,Files,MainCarousel,OurWork,OurService,Support,Page
 
 class ProductsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Products
+        fields = '__all__'
+        depth = 1
+
+class PageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Page
         fields = '__all__'
         depth = 1
 

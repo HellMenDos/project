@@ -1,11 +1,17 @@
 from django.contrib import admin
-from .models import Products,Files,MainCarousel,OurWork,OurService,Support
+from .models import Products,Files,MainCarousel,OurWork,OurService,Support,Page
 # Register your models here.
 admin.site.site_header = 'СК СТРОЙ ПРОЕКТ'
 
 
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):
+    list_display = ('id','title')
+    search_fields = ("title__startswith", )
+    filter_horizontal = ('files',)
+
+@admin.register(Page)
+class PageAdmin(admin.ModelAdmin):
     list_display = ('id','title')
     search_fields = ("title__startswith", )
     filter_horizontal = ('files',)
