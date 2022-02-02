@@ -25,6 +25,8 @@ urlpatterns = [
     path('service/one/<int:pk>/',getOurService.as_view(),name='one_service'),
     path('proposal/',createProposal.as_view(),name='proposal'),
     path('file/<int:pk>/',getFile.as_view(),name='file'),
+    path('carousel/all/',getMainCarousels.as_view(),name='all_carousel'),
+    path('carousel/one/<int:pk>/',getMainCarousel.as_view(),name='one_carousel'),
     path('swagger(?P<format>\.json|\.yaml)', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),

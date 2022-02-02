@@ -38,3 +38,4 @@ xlwt==1.3.0
 Pillow==8.4.0
 django-light==0.1.0.post3
 django-ckeditor==6.0.0
+django-cors-headers==3.11.0

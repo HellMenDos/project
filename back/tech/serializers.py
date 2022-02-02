@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Products,Files,OurWork,OurService,Support
+from .models import MainCarousel, Products,Files,OurWork,OurService,Support
 
 class ProductsSerializer(serializers.ModelSerializer):
 
@@ -7,6 +7,12 @@ class ProductsSerializer(serializers.ModelSerializer):
         model = Products
         fields = '__all__'
         depth = 1
+
+class MainCarouselSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MainCarousel
+        fields = '__all__'
 
 class OurWorkSerializer(serializers.ModelSerializer):
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Products,Files,OurWork,OurService,Support
+from .models import MainCarousel, Products,Files,OurWork,OurService,Support
 # Register your models here.
 admin.site.site_header = 'СК СТРОЙ ПРОЕКТ'
 
@@ -23,6 +23,10 @@ class OurWorkAdmin(admin.ModelAdmin):
     search_fields = ("title__startswith",)
     filter_horizontal = ('files',)
 
+@admin.register(MainCarousel)
+class MainCarouselAdmin(admin.ModelAdmin):
+    list_display = ('id','title','describe','button_text')
+    search_fields = ("title__startswith",)
 
 @admin.register(OurService)
 class OurServiceAdmin(admin.ModelAdmin):

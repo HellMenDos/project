@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Products,Files,OurWork,OurService,Support
-from .serializers import OurServiceSerializer, OurWorkSerializer, ProductsSerializer,FilesSerializer, SupportSerializer
+from .models import MainCarousel, Products,Files,OurWork,OurService,Support
+from .serializers import MainCarouselSerializer, OurServiceSerializer, OurWorkSerializer, ProductsSerializer,FilesSerializer, SupportSerializer
+
+#Carousel
+class getMainCarousel(generics.RetrieveAPIView):
+    queryset = MainCarousel.objects.all()
+    serializer_class = MainCarouselSerializer
+
+class getMainCarousels(generics.ListAPIView):
+    queryset = MainCarousel.objects.all()
+    serializer_class = MainCarouselSerializer
+
 
 #Products
 class getProduct(generics.RetrieveAPIView):
@@ -39,6 +49,6 @@ class getOurServices(generics.ListAPIView):
     serializer_class = OurServiceSerializer
 
 #Support
-class createProposal(generics.RetrieveAPIView):
+class createProposal(generics.CreateAPIView):
     queryset = Support.objects.all()
     serializer_class = SupportSerializer
