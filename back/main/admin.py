@@ -38,7 +38,6 @@ class OurWorkAdmin(admin.ModelAdmin):
 class OurServiceAdmin(admin.ModelAdmin):
     list_display = ('id','title')
     search_fields = ("title__startswith",)
-    filter_horizontal = ('files',)
 
 
 @admin.register(Support)

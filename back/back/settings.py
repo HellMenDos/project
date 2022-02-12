@@ -139,6 +139,13 @@ MEDIA_ROOT = BASE_DIR / "/app/media"
 CKEDITOR_UPLOAD_PATH = "app/media"
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'poznkirill2@gmail.com'
+EMAIL_HOST_PASSWORD = 'Kirill5921'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

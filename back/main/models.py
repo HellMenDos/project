@@ -1,6 +1,11 @@
 from datetime import datetime
+import email
 from django.db import models
+from django.db.models.signals import post_save
+from django.core.mail import send_mail
+from django.dispatch import receiver
 from ckeditor.fields import RichTextField
+from django.conf import settings
 
 class MainCarousel(models.Model):
     title = models.CharField(max_length=200, verbose_name='Главный текст')
@@ -20,8 +25,8 @@ class MainCarousel(models.Model):
 
 class Files(models.Model):
     title = models.CharField(max_length=200, verbose_name='Описание файла/картинки и тд.')
-    photo = models.ImageField(
-        upload_to='carousel', blank=True, default='', verbose_name='Задний фон')
+    photo = models.FileField(
+        upload_to='carousel', blank=True, default='', verbose_name='Карнтинка')
 
     def __str__(self):
         return f"{self.title}"
@@ -49,8 +54,7 @@ class OurService(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название работы')
     describe = models.TextField(verbose_name='Текст описания работы')
     button_url = models.CharField(max_length=300,blank=True, verbose_name='Ссылка')
-    files = models.ManyToManyField(Files,related_name="service_files", verbose_name='Прикрепленные файлы')
-
+    files = models.ImageField(upload_to='service', blank=True, default='', verbose_name='Картинка')
     def __str__(self):
         return f"{self.title}"
 
@@ -99,3 +103,12 @@ class Support(models.Model):
     class Meta:
         verbose_name = 'Клиенты'
         verbose_name_plural = 'Клиенты'
+
+@receiver(post_save, sender=Support)
+def support__create(sender, instance, created, **kwargs):
+    send_mail(
+        f'{instance.name} {instance.phone}',
+        f'{instance.message} \n{instance.phone}\n{instance.email}',
+        settings.EMAIL_HOST_USER,
+        [settings.EMAIL_HOST_USER],
+    )
