@@ -31,7 +31,7 @@ services:
 
   front:
     build:
-      context: ./front
+      context: ./front_app
     depends_on:
       - back
     restart: always
