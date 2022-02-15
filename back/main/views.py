@@ -60,5 +60,6 @@ class getOurPages(generics.ListAPIView):
 class createProposal(generics.CreateAPIView):
     queryset = Support.objects.all()
     serializer_class = SupportSerializer
+    authentication_classes = []
 
 
