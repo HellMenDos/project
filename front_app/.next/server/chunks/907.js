@@ -149,7 +149,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./types/common.ts
-const Url = 'http://localhost';
+const Url = 'http://62.113.100.169/api';
 
 ;// CONCATENATED MODULE: ./utils/fetching.ts
 

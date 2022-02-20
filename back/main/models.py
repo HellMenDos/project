@@ -81,6 +81,7 @@ class Page(models.Model):
     title = models.CharField(max_length=200,default='', verbose_name='Оглавление')
     describe = RichTextField(default='', verbose_name='Описание страницы')
     files = models.ManyToManyField(Files,related_name="page_files", verbose_name='Прикрепленные файлы')
+    show = models.BooleanField(default=True, verbose_name='Показывать в меню ?')
 
     def __str__(self):
         return f"{self.page_title}"

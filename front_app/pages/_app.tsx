@@ -10,6 +10,7 @@ import ContactForm from '../components/contact-form'
 import { Page } from '../types/common'
 import { fetchData } from '../utils/fetching'
 import { useRouter } from 'next/router'
+import { YMInitializer } from 'react-yandex-metrika';
 
 
 interface PagesLinkProps {
@@ -24,6 +25,7 @@ const PagesLink: React.FC<PagesLinkProps> = ({pages,prefix = '',position = 'top'
     return (
     <> {
     pages.map((item:Page)=> {
+      if (item.show) return;
       return (
         <Link key={item.id} href={`${prefix}/page/${item.id}`}>
           <a className={isButton(position)}>{item.page_title}</a>
@@ -71,6 +73,7 @@ function Layout({ Component, pageProps }: AppProps) {
 
   return <div>
     <header className="header">
+    <YMInitializer accounts={[87581961]} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
       <Link href="/">

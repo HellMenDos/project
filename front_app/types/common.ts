@@ -31,6 +31,7 @@ export interface Page {
     title:string,
     describe:string,
     files:File[]
+    show:boolean
 }
 
 export interface ServerData {

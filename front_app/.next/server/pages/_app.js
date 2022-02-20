@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 7371:
+/***/ 99:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -56,7 +56,10 @@ var contact_form = __webpack_require__(7907);
 var fetching = __webpack_require__(7074);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(1853);
+;// CONCATENATED MODULE: external "react-yandex-metrika"
+const external_react_yandex_metrika_namespaceObject = require("react-yandex-metrika");
 ;// CONCATENATED MODULE: ./pages/_app.tsx
+
 
 
 
@@ -72,6 +75,7 @@ const PagesLink = ({ pages , prefix ='' , position ='top'  })=>{
         children: [
             " ",
             pages.map((item)=>{
+                if (item.show) return;
                 return(/*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
                     href: `${prefix}/page/${item.id}`,
                     children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
@@ -126,6 +130,11 @@ function Layout({ Component , pageProps  }) {
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("header", {
                 className: "header",
                 children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(external_react_yandex_metrika_namespaceObject.YMInitializer, {
+                        accounts: [
+                            87581961
+                        ]
+                    }),
                     /*#__PURE__*/ jsx_runtime_.jsx("link", {
                         rel: "stylesheet",
                         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -380,7 +389,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,664,907], () => (__webpack_exec__(7371)));
+var __webpack_exports__ = __webpack_require__.X(0, [730,664,907], () => (__webpack_exec__(99)));
 module.exports = __webpack_exports__;
 
 })();
