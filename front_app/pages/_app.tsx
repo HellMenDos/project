@@ -73,7 +73,6 @@ function Layout({ Component, pageProps }: AppProps) {
 
   return <div>
     <header className="header">
-    <YMInitializer accounts={[87581961]} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
       <Link href="/">
@@ -132,7 +131,9 @@ function Layout({ Component, pageProps }: AppProps) {
           <img src='./bottom.png' alt='' style={{width:300}} />
         </a>
     </Link>
+    
     </div>
+    <YMInitializer accounts={[87581961]} />
 
     </section>
     </div>
