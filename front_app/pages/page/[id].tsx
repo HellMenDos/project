@@ -30,7 +30,7 @@ const Page: NextPage<{ page: Page }> = ({page}) => {
           <div className='file-section'>
             <h4  className="heading">Прикрепленные файлы</h4>
             <div>
-              {page.files.map((item:File) => <a key={item.id} className='btn btn-download' href={item.photo}>{item.title}</a>)}
+              {page.files.map((item:File) => <a key={item.id} className='btn btn-download' style={{marginLeft:10}} href={item.photo}>{item.title}</a>)}
             </div>
           </div>
         </section>

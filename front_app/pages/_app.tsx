@@ -77,7 +77,7 @@ function Layout({ Component, pageProps }: AppProps) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
       <Link href="/">
         <a className="logo">
-          <img src='./logo.png' alt='' />
+          <img src='/logo.png' alt='' />
         </a>
       </Link>
 
@@ -128,7 +128,7 @@ function Layout({ Component, pageProps }: AppProps) {
     <div className="credit">
     <Link href="/">
         <a className="logo">
-          <img src='./bottom.png' alt='' style={{width:300}} />
+          <img src='/bottom.png' alt='' style={{width:300}} />
         </a>
     </Link>
     
