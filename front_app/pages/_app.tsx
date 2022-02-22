@@ -133,7 +133,7 @@ function Layout({ Component, pageProps }: AppProps) {
     </Link>
     
     </div>
-    <YMInitializer accounts={[87581961]} />
+    <YMInitializer accounts={[87600024]} />
 
     </section>
     </div>
