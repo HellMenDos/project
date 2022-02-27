@@ -28,7 +28,7 @@ const Product: NextPage<{ product: ServerData }> = ({product}) => {
           <h1  className="heading">{product.title}</h1>
           <div className="box-container box-container-page">
           </div>
-          {product.files &&
+          {product.files.length &&
           <div className='file-section'>
             <h4  className="heading">Прикрепленные файлы</h4>
             <div>
