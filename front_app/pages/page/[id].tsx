@@ -27,12 +27,14 @@ const Page: NextPage<{ page: Page }> = ({page}) => {
           <h1  className="heading">{page.title}</h1>
           <div className="box-container box-container-page">
           </div>
+          {page.files &&
           <div className='file-section'>
             <h4  className="heading">Прикрепленные файлы</h4>
             <div>
               {page.files.map((item:File) => <a key={item.id} className='btn btn-download' style={{marginLeft:10}} href={item.photo}>{item.title}</a>)}
             </div>
           </div>
+          }
         </section>
       </>
   )

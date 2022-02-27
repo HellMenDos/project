@@ -67,7 +67,7 @@ class Products(models.Model):
     title = models.CharField(max_length=200, verbose_name='Название продукта')
     sub_title = models.CharField(max_length=200,default='', verbose_name='Мелкое описание')
     describe = RichTextField(default='', verbose_name='Полный текст')
-    files = models.ManyToManyField(Files,related_name="product_files", verbose_name='Прикрепленные файлы')
+    files = models.ManyToManyField(Files,related_name="product_files",blank=True, verbose_name='Прикрепленные файлы')
 
     def __str__(self):
         return f"{self.title}"
@@ -80,7 +80,7 @@ class Page(models.Model):
     page_title = models.CharField(max_length=200, verbose_name='Название страницы')
     title = models.CharField(max_length=200,default='', verbose_name='Оглавление')
     describe = RichTextField(default='', verbose_name='Описание страницы')
-    files = models.ManyToManyField(Files,related_name="page_files", verbose_name='Прикрепленные файлы')
+    files = models.ManyToManyField(Files,related_name="page_files",blank=True, verbose_name='Прикрепленные файлы')
     show = models.BooleanField(default=True, verbose_name='Не показывать в меню')
 
     def __str__(self):
