@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ig!==(bpo3!k^)9$k(u&$-s7^$oz=r%!@0w@yq)k#-m&5t%sz3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = [
+    'skstroyproekt.ru',
+],
 CORS_ORIGIN_ALLOW_ALL=True
 # Application definition
 
@@ -57,7 +58,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000','https://skstroyproekt.ru']
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://skstroyproekt.ru'
+],
+
+CORS_ORIGIN_WHITELIST = [
+    'https://skstroyproekt.ru',
+]
 
 ROOT_URLCONF = 'back.urls'
 
