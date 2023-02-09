@@ -61,9 +61,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
 
-CSRF_TRUSTED_ORIGINS = ["*"]
-
-
 CORS_ORIGIN_WHITELIST = [
     'https://skstroyproekt.ru',
 ]
