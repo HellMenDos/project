@@ -3,7 +3,6 @@ import { GetServerSideProps, NextPage } from 'next';
 
 import Slider from '../components/slider'
 import About from '../components/about';
-import Projects from '../components/projects';
 import Services from '../components/services';
 import Works from '../components/work';
 import Contact from '../components/contact';
@@ -26,7 +25,6 @@ const HomePage: NextPage<{
         </Head>
         <Slider data={slider} />
         <About />
-        <Projects data={products} />
         <Services data={service} />
         <Works data={work} />
         <Contact path={'main'} />

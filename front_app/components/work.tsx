@@ -1,6 +1,7 @@
 
 import React,{FC} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import WorkCard from './sub-components/work-card';
 import { ServerData } from '../types/common'
@@ -16,8 +17,14 @@ const Works: FC<{data: ServerData[]}> = ({data}) =>{
 
         <div className="swiper blogs-slider">
             <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={2}
+                navigation={true}
+                loop={true}
+                effect="fade"
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
             >
                 {
                 data.map((item: ServerData) => {

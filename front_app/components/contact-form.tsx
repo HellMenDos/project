@@ -33,20 +33,24 @@ const ContactForm: FC<{ path:string }> = ({ path }) => {
                   <h3>Контакты</h3>
                   <div className='contact__section'>
                     <div className='contact__row'>
-                      <div>ИИН:</div>
-                      <div>345345353453453</div>
+                      <div>Юридический адрес:</div>
+                      <div>127204, Г. МОСКВА, ВН.ТЕР.Г. 2-Я СЕВЕРНАЯ ЛИНИЯ, Д. 27.</div>
                     </div>
                     <div className='contact__row'>
                       <div>ИИН:</div>
-                      <div>345345353453453</div>
+                      <div>7731364366</div>
                     </div>
                     <div className='contact__row'>
-                      <div>ИИН:</div>
-                      <div>345345353453453</div>
+                      <div>КПП:</div>
+                      <div>771501001</div>
                     </div>
                     <div className='contact__row'>
-                      <div>ИИН:</div>
-                      <div>345345353453453</div>
+                      <div>Телефон</div>
+                      <div>8 926 332-34-48</div>
+                    </div>
+                    <div className='contact__row'>
+                      <div>Почта</div>
+                      <div>infostroypro@yandex.ru</div>
                     </div>
                   </div>
                   <input type="text" required={true} placeholder="Ваше ФИО" className="box" onChange={(e) => setName(e.target.value)} />

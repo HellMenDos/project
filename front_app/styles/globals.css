@@ -429,8 +429,8 @@ section {
 }
 
 .home .slide .content p {
-  font-size: 1.4rem;
-  color: var(--light-color);
+  font-size: 2.4rem;
+  color: black;
   line-height: 2;
   padding: 1rem 0;
 }
@@ -458,20 +458,48 @@ section {
   transform: skew(-15deg);
 }
 
-.home .swiper-button-next:hover,
-.home .swiper-button-prev:hover {
-  background: var(--yellow);
-}
-
 .home .swiper-button-next::after,
 .home .swiper-button-prev::after {
   font-size: 2rem;
   color: var(--white);
 }
 
+.swiper-button-next {
+  margin-right: 10px;
+}
+.swiper-button-prev {
+  margin-right: 60px;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  content: 'next';
+  background: black;
+  font-size: 20px !important;
+  z-index: 100;
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'next';
+    content: 'next';
+    background: black;
+    font-size: 20px !important;
+    z-index: 100;
+    padding: 10px;
+    border-radius: 30px;
+    color: white;
+}
+
 .home .swiper-button-prev {
   right: 7rem;
 }
+
+.home-slider > div > .swiper-button-prev::after, .swiper-button-next::after {
+  background: none;
+} 
 
 .about .row {
   display: -webkit-box;
@@ -1033,12 +1061,11 @@ section {
 .contact__row > div:first-child {
   font-size: 18px;
   font-weight: bold;
-  letter-spacing: 5px;
 }
 .contact__row > div:last-child {
   font-size: 13px;
   font-weight: lighter;
-  letter-spacing: 5px;
+  text-align: right;
 }
 .box-container-page {
   font-size: 2rem;

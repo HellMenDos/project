@@ -11,27 +11,8 @@ const WorkCard: FC<{item: ServerData}> = ({ item }) =>{
   return (
     <div className="swiper-slide slide">
         <div className="image image-work">
-            <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
-              slidesPerView={1}
-              navigation={true}
-              loop={true}
-              effect="fade"
-              pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
-            >
-                {
-                (item.files as File[]).map((file: File) => {
-                    return (
-                      <SwiperSlide key={file.id}>
-                        <img src={file.photo} alt="" />
-                      </SwiperSlide>
-                    )
-
-                }) 
-                }  
-            </Swiper>
+          {/* @ts-ignore */}
+          <img src={item.files[0].photo} alt="" />
         </div>
         
         <div className="content">

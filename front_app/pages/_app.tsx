@@ -82,9 +82,6 @@ function Layout({ Component, pageProps }: AppProps) {
       </Link>
 
       <nav className={`navbar ${active && 'active'}`}>
-        <Link href={HrefConstructor('products')}>
-          <a>Продукты</a>
-        </Link>
         <Link href={HrefConstructor('services')}>
           <a>Услуги</a>
         </Link>
@@ -111,9 +108,6 @@ function Layout({ Component, pageProps }: AppProps) {
     <section className="footer">
 
     <div className="links">
-        <Link href={HrefConstructor('products')}>
-          <a className='btn'>Продукты</a>
-        </Link>
         <Link href={HrefConstructor('services')}>
           <a className='btn'>Услуги</a>
         </Link>

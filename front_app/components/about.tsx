@@ -15,17 +15,17 @@ const About: FC = () => {
         </div>
 
         <div className="content">
-            <h3>We will provide you the best work which you dreamt for!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.</p>
-            <a href="#services" className="btn">read more</a>
+            <h3>ООО «СК  СтройПроект»,</h3>
+            <p>ООО «СК  СтройПроект», ИНН​7731364366/КПП 771501001 была основана 3 мая 2017 года выпускником Московского Государственного Строительного Университета Поздняковым Виктором Евгеньевичем. Генеральный директор имеет более 20 лет опыт в строительной отрасли.</p>
+            <a href="#contact" className="btn">Связаться</a>
         </div>
 
         </div>
 
-        <div className="box-container">
+        {/* <div className="box-container">
 
         <div className="box">
-            <h3>10+</h3>
+            <h3>большой перечень услуг</h3>
             <p>years of experience</p>
         </div>
 
@@ -44,7 +44,7 @@ const About: FC = () => {
             <p>active workers</p>
         </div>
 
-        </div>
+        </div> */}
 
         </section>
       </>
