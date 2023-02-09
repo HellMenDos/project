@@ -26,6 +26,18 @@ SECRET_KEY = 'django-insecure-ig!==(bpo3!k^)9$k(u&$-s7^$oz=r%!@0w@yq)k#-m&5t%sz3
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://skstroyproekt.ru','https://www.skstroyproekt.ru']
+
+CORS_ALLOWED_ORIGINS = [
+    "https://example.com",
+    "https://sub.example.com",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1",
+    "http://45.80.69.79",
+    "https://45.80.69.79",
+    "https://a-lit.ru",
+    "http://a-lit.ru"
+]
 
 CORS_ORIGIN_ALLOW_ALL=True
 # Application definition
@@ -57,10 +69,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000','https://skstroyproekt.ru']
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_TRUSTED_ORIGINS = ['https://www.skstroyproekt.ru/','https://skstroyproekt.ru/']
 ROOT_URLCONF = 'back.urls'
 
 TEMPLATES = [
