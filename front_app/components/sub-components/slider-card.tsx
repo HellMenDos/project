@@ -9,7 +9,7 @@ const SliderCard: FC<{item:Carousel}> = ({ item }) => {
             
             <h3>{item.title}</h3>
             <p>{item.describe}</p>
-            <a href={item?.button_url ? item?.button_url : '#contact'} className="btn">{item?.button_text ? item?.button_text : "Подробнее"}</a>
+            <a href={item?.button_url ? item?.button_url : '#contact'} className="btn-white">{item?.button_text ? item?.button_text : "Подробнее"}</a>
         </div>
     </section>
   )

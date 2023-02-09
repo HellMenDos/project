@@ -9,7 +9,7 @@ const Services: FC<{data: ServerData[]}> = ({data}) =>{
       <>
         <section className="services" id="services">
 
-        <h1 className="heading">Наши услуги </h1>
+        <h1 className="heading">Перечень работ которые выполнит организация</h1>
 
         <div className="box-container">
           {

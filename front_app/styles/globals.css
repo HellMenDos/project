@@ -67,7 +67,25 @@ section {
   transform: skew(-15deg);
 }
 
+.btn-white {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  border-radius: 10px;
+  transform: skew(-15deg);
+}
+
 .btn:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+.btn-white:hover {
   background: var(--yellow);
   color: var(--black);
 }
@@ -413,24 +431,24 @@ section {
   height: 100%;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(var(--white)), to(transparent));
-  background: linear-gradient(90deg, var(--white), transparent);
+  background: linear-gradient(0deg,rgb(0 0 0 / 57%),rgba(50,50,50,.3));
 }
 
 .home .slide .content {
-  width: 50rem;
+  width: 70rem;
   position: relative;
 }
 
 .home .slide .content h3 {
   font-size: 6rem;
-  color: var(--black);
+  color: white;
   text-transform: capitalize;
   text-transform: uppercase;
 }
 
 .home .slide .content p {
-  font-size: 2.4rem;
-  color: black;
+  font-size: 1.4rem;
+  color: white;
   line-height: 2;
   padding: 1rem 0;
 }
