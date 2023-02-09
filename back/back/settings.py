@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-ig!==(bpo3!k^)9$k(u&$-s7^$oz=r%!@0w@yq)k#-m&5t%sz3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'skstroyproekt.ru',
-],
+ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_ALLOW_ALL=True
 # Application definition
@@ -60,10 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
-
-CORS_ORIGIN_WHITELIST = [
-    'https://skstroyproekt.ru',
-]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ROOT_URLCONF = 'back.urls'
 
@@ -84,7 +79,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'back.wsgi.application'
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Database
