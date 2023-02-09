@@ -515,7 +515,10 @@ section {
   right: 7rem;
 }
 
-.home-slider > div > .swiper-button-prev::after, .swiper-button-next::after {
+.home-slider > div > .swiper-button-prev::after {
+  background: none;
+} 
+.home-slider > div > .swiper-button-next::after {
   background: none;
 } 
 
@@ -926,7 +929,7 @@ section {
 }
 
 .works .slide .image img {
-  height: 100%;
+  height: 250px;
   border-radius: 10px;
   width: 100%;
   -o-object-fit: cover;
